@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AURA — Timeless Elegance</title>
+  <title>AURA — Premium Product Experience</title>
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -76,6 +76,14 @@
       background: #00f3ff;
     }
 
+    /* Smooth canvas rendering */
+    #scrolly-canvas {
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      image-rendering: auto;
+    }
+
     /* Custom Cursor */
     .custom-cursor {
       width: 24px;
@@ -119,7 +127,7 @@
   </style>
 </head>
 
-<body class="bg-black select-none antialiased">
+<body class="bg-black select-none antialiased" style="overscroll-behavior-x: none;">
 
   <!-- Custom cursor elements -->
   <div class="custom-cursor hidden lg:block"></div>
@@ -189,25 +197,25 @@
       <a
         href="#intro-section"
         class="hover:text-white transition-colors duration-300">
-        The Ring
+        Product
       </a>
 
       <a
         href="#health-section"
         class="hover:text-white transition-colors duration-300">
-        Craftsmanship
+        Benefits
       </a>
 
       <a
         href="#battery-section"
         class="hover:text-white transition-colors duration-300">
-        Details
+        Features
       </a>
 
       <a
         href="#cta-section"
         class="hover:text-white transition-colors duration-300">
-        Reserve
+        Get Started
       </a>
 
     </nav>
@@ -217,7 +225,7 @@
       <a
         href="#cta-section"
         class="px-5 py-2 border border-white/10 rounded-full text-xs uppercase tracking-wider text-white hover:text-black hover:bg-white hover:border-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-        Reserve
+        Get Started
       </a>
     </div>
 
@@ -267,11 +275,11 @@
             <h1
               class="text-5xl md:text-8xl font-extralight tracking-[0.15em] text-white">
 
-              TIMELESS
+              PREMIUM
 
               <span
                 class="font-normal text-neonBlue neon-text-glow">
-                ELEGANCE
+                EXPERIENCE
               </span>
 
             </h1>
@@ -309,7 +317,7 @@
             <span
               class="text-neonBlue text-xs uppercase tracking-widest font-semibold mb-2">
 
-              Crafted to Perfection
+              Why Choose AURA
 
             </span>
 
@@ -341,12 +349,12 @@
 
                   <span
                     class="text-zinc-500 text-[10px] uppercase tracking-widest">
-                    The Centerpiece
+                    Product Quality
                   </span>
 
                   <span
                     class="text-white text-base font-light mt-1">
-                    Brilliant Diamond
+                    Premium Materials
                   </span>
 
                 </div>
@@ -370,7 +378,7 @@
               </div>
 
 
-              <!-- Craftsmanship Card -->
+              <!-- Benefits Card -->
               <div
                 id="health-card-2"
                 class="p-4 bg-zinc-950/80 border border-white/5 backdrop-blur-md rounded-xl hover:border-neonBlue/30 transition-colors duration-500 flex items-center justify-between">
@@ -379,12 +387,12 @@
 
                   <span
                     class="text-zinc-500 text-[10px] uppercase tracking-widest">
-                    The Craft
+                    The Experience
                   </span>
 
                   <span
                     class="text-white text-base font-light mt-1">
-                    Precision Crafted Setting
+                    Thoughtful Design
                   </span>
 
                 </div>
@@ -417,12 +425,12 @@
 
                   <span
                     class="text-zinc-500 text-[10px] uppercase tracking-widest">
-                    The Finish
+                    The Details
                   </span>
 
                   <span
                     class="text-white text-base font-light mt-1">
-                    Exceptional Elegance
+                    Built With Care
                   </span>
 
                 </div>
@@ -436,7 +444,7 @@
                     ∞
 
                     <span class="text-xs text-zinc-400">
-                      TIMELESS
+                      PREMIUM
                     </span>
 
                   </span>
@@ -461,7 +469,7 @@
             <span
               class="text-neonBlue text-xs uppercase tracking-widest font-semibold mb-2">
 
-              Made to Last
+              Product Details
 
             </span>
 
@@ -484,25 +492,24 @@
               class="flex flex-col md:flex-row items-center md:items-start gap-8 pointer-events-auto">
 
 
-              <!-- Details specs list -->
+              <!-- Features specs list -->
               <div
                 class="space-y-4 max-w-xs text-zinc-400 font-light text-sm md:text-base order-2 md:order-1 text-center md:text-right mt-4 md:mt-0">
 
                 <p>
-                  A refined silhouette designed to capture light from every angle.
+                  Every detail is carefully considered to deliver a polished and premium experience.
                 </p>
 
                 <div class="h-[1px] bg-white/5 w-full"></div>
 
                 <p>
-                  Meticulously crafted to become a symbol of love,
-                  elegance, and unforgettable moments.
+                  Designed to be practical, reliable, and visually refined while keeping the experience simple.
                 </p>
 
               </div>
 
 
-              <!-- Craftsmanship Visual -->
+              <!-- Benefits Visual -->
               <div
                 class="relative w-36 h-36 flex items-center justify-center order-1 md:order-2">
 
@@ -578,7 +585,7 @@
               <span
                 class="text-neonBlue text-xs uppercase tracking-[0.2em] font-semibold mb-2 block">
 
-                Find Your Perfect Ring
+                Interested in AURA?
 
               </span>
 
@@ -586,187 +593,53 @@
               <h2
                 class="text-3xl md:text-4xl font-light tracking-tight text-white mb-6">
 
-                Reserve Your Ring
+                Get Started Your Ring
 
               </h2>
 
 
               <form
                 id="preorder-form"
-                class="space-y-5 text-left">
+                class="space-y-4 text-left">
 
-
-                <!-- Finish Selector -->
-                <div>
-
-                  <label
-                    class="text-zinc-500 text-[10px] uppercase tracking-wider block mb-2 font-medium">
-
-                    Select Ring Finish
-
-                  </label>
-
-
-                  <div class="grid grid-cols-3 gap-2">
-
-                    <button
-                      type="button"
-                      onclick="selectColor(this, 'Classic White Gold')"
-                      class="color-btn py-2.5 border border-neonBlue text-white bg-neonBlue/10 text-xs uppercase tracking-wider rounded-lg font-light transition-all duration-300">
-
-                      Classic
-
-                    </button>
-
-
-                    <button
-                      type="button"
-                      onclick="selectColor(this, 'Platinum')"
-                      class="color-btn py-2.5 border border-white/5 text-zinc-400 bg-transparent hover:border-white/20 text-xs uppercase tracking-wider rounded-lg font-light transition-all duration-300">
-
-                      Platinum
-
-                    </button>
-
-
-                    <button
-                      type="button"
-                      onclick="selectColor(this, 'Rose Gold')"
-                      class="color-btn py-2.5 border border-white/5 text-zinc-400 bg-transparent hover:border-white/20 text-xs uppercase tracking-wider rounded-lg font-light transition-all duration-300">
-
-                      Rose Gold
-
-                    </button>
-
-                  </div>
-
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <input
+                    type="text"
+                    id="cust-name"
+                    required
+                    placeholder="Full Name"
+                    class="w-full bg-zinc-950 border border-white/5 px-4 py-3 text-sm text-white placeholder-zinc-600 rounded-lg focus:outline-none focus:border-neonBlue transition-all duration-300 font-light font-sans">
 
                   <input
-                    type="hidden"
-                    id="selected-color"
-                    value="Classic White Gold">
-
+                    type="tel"
+                    id="cust-phone"
+                    required
+                    placeholder="Phone Number"
+                    class="w-full bg-zinc-950 border border-white/5 px-4 py-3 text-sm text-white placeholder-zinc-600 rounded-lg focus:outline-none focus:border-neonBlue transition-all duration-300 font-light font-sans">
                 </div>
 
+                <input
+                  type="email"
+                  id="cust-email"
+                  required
+                  placeholder="Email Address"
+                  class="w-full bg-zinc-950 border border-white/5 px-4 py-3 text-sm text-white placeholder-zinc-600 rounded-lg focus:outline-none focus:border-neonBlue transition-all duration-300 font-light font-sans">
 
-                <!-- Size Selector -->
-                <div>
+                <textarea
+                  id="cust-message"
+                  rows="4"
+                  placeholder="What would you like to know?"
+                  class="w-full resize-none bg-zinc-950 border border-white/5 px-4 py-3 text-sm text-white placeholder-zinc-600 rounded-lg focus:outline-none focus:border-neonBlue transition-all duration-300 font-light font-sans"></textarea>
 
-                  <div
-                    class="flex justify-between items-center mb-2">
-
-                    <label
-                      class="text-zinc-500 text-[10px] uppercase tracking-wider font-medium">
-
-                      Select Ring Size
-
-                    </label>
-
-
-                    <span
-                      class="text-neonBlue text-[10px] uppercase tracking-wider font-light cursor-pointer hover:underline"
-                      onclick="showSizingInfo()">
-
-                      Need Help With Your Size?
-
-                    </span>
-
-                  </div>
-
-
-                  <div class="grid grid-cols-6 gap-2">
-
-                    <button
-                      type="button"
-                      onclick="selectSize(this, '7')"
-                      class="size-btn py-2 border border-white/5 text-zinc-400 bg-transparent hover:border-white/20 text-xs rounded-lg transition-all duration-300">
-                      7
-                    </button>
-
-                    <button
-                      type="button"
-                      onclick="selectSize(this, '8')"
-                      class="size-btn py-2 border border-white/5 text-zinc-400 bg-transparent hover:border-white/20 text-xs rounded-lg transition-all duration-300">
-                      8
-                    </button>
-
-                    <button
-                      type="button"
-                      onclick="selectSize(this, '9')"
-                      class="size-btn py-2 border border-neonBlue text-white bg-neonBlue/10 text-xs rounded-lg transition-all duration-300">
-                      9
-                    </button>
-
-                    <button
-                      type="button"
-                      onclick="selectSize(this, '10')"
-                      class="size-btn py-2 border border-white/5 text-zinc-400 bg-transparent hover:border-white/20 text-xs rounded-lg transition-all duration-300">
-                      10
-                    </button>
-
-                    <button
-                      type="button"
-                      onclick="selectSize(this, '11')"
-                      class="size-btn py-2 border border-white/5 text-zinc-400 bg-transparent hover:border-white/20 text-xs rounded-lg transition-all duration-300">
-                      11
-                    </button>
-
-                    <button
-                      type="button"
-                      onclick="selectSize(this, '12')"
-                      class="size-btn py-2 border border-white/5 text-zinc-400 bg-transparent hover:border-white/20 text-xs rounded-lg transition-all duration-300">
-                      12
-                    </button>
-
-                  </div>
-
-
-                  <input
-                    type="hidden"
-                    id="selected-size"
-                    value="9">
-
-                </div>
-
-
-                <!-- Personal Info Fields -->
-                <div class="space-y-3">
-
-                  <div>
-
-                    <input
-                      type="text"
-                      id="cust-name"
-                      required
-                      placeholder="Full Name"
-                      class="w-full bg-zinc-950 border border-white/5 px-4 py-3 text-sm text-white placeholder-zinc-600 rounded-lg focus:outline-none focus:border-neonBlue transition-all duration-300 font-light font-sans">
-
-                  </div>
-
-
-                  <div>
-
-                    <input
-                      type="email"
-                      id="cust-email"
-                      required
-                      placeholder="Email Address"
-                      class="w-full bg-zinc-950 border border-white/5 px-4 py-3 text-sm text-white placeholder-zinc-600 rounded-lg focus:outline-none focus:border-neonBlue transition-all duration-300 font-light font-sans">
-
-                  </div>
-
-                </div>
-
-
-                <!-- Submit Button -->
                 <button
                   type="submit"
                   class="w-full py-4 bg-white text-black font-semibold text-xs uppercase tracking-widest rounded-lg hover:bg-neonBlue hover:text-black transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(0,243,255,0.4)]">
-
-                  Reserve This Ring
-
+                  Request Information
                 </button>
 
+                <p class="text-zinc-600 text-[10px] text-center tracking-wide">
+                  No checkout required. We’ll contact you with the information you requested.
+                </p>
               </form>
 
             </div>
@@ -775,7 +648,7 @@
             <p
               class="text-zinc-600 text-[10px] tracking-widest uppercase mt-6">
 
-              Complimentary delivery. Beautifully presented for your special moment.
+              Leave your details and our team will get back to you with more information.
 
             </p>
 
@@ -826,7 +699,7 @@
       <h3
         class="text-2xl font-light tracking-tight text-white mb-4">
 
-        Find Your Perfect Fit
+        Need More Information?
 
       </h3>
 
@@ -834,10 +707,7 @@
       <p
         class="text-zinc-400 font-light text-sm leading-relaxed mb-6">
 
-        Getting the perfect fit is an important part of choosing
-        your ring. If you are unsure of your size, our team can
-        help you determine the best fit before your reservation
-        is confirmed.
+        Have questions about the product, pricing, or next steps? Leave your details and our team can help.
 
       </p>
 
@@ -846,7 +716,7 @@
         onclick="hideSizingInfo()"
         class="px-6 py-2.5 bg-neonBlue/10 text-neonBlue border border-neonBlue/30 text-xs uppercase tracking-widest rounded-lg hover:bg-neonBlue hover:text-black transition-all duration-300">
 
-        Got It
+        Close
 
       </button>
 
@@ -1042,26 +912,50 @@
 
     // Scroll interpolation target state
     const ring = {
-      frame: 0
+      frame: 0,
+      targetFrame: 0
     };
 
 
+    let lastRenderedFrame = -1;
+    let animationRunning = false;
+
+    // The GSAP timeline controls targetFrame. The actual canvas frame
+    // smoothly follows it using interpolation, which removes visible
+    // jumps when scrolling quickly.
     function render() {
+      if (!imagesPreloaded || !images.length) return;
 
-      if (
-        imagesPreloaded &&
-        images[ring.frame]
-      ) {
+      const frame = Math.max(
+        0,
+        Math.min(frameCount - 1, Math.round(ring.frame))
+      );
 
-        drawImageCover(
-          context,
-          images[ring.frame]
-        );
-
+      if (frame !== lastRenderedFrame && images[frame]) {
+        drawImageCover(context, images[frame]);
+        lastRenderedFrame = frame;
       }
-
     }
 
+    function smoothFrameLoop() {
+      if (!imagesPreloaded) {
+        requestAnimationFrame(smoothFrameLoop);
+        return;
+      }
+
+      const target = ring.targetFrame ?? 0;
+      const distance = target - ring.frame;
+
+      // Lower value = softer movement, higher value = more responsive.
+      ring.frame += distance * 0.12;
+
+      if (Math.abs(distance) < 0.01) {
+        ring.frame = target;
+      }
+
+      render();
+      requestAnimationFrame(smoothFrameLoop);
+    }
 
     function initScrollytelling() {
 
@@ -1088,7 +982,7 @@
 
             end: "bottom bottom",
 
-            scrub: 1.5,
+            scrub: 2.2,
 
             onUpdate: (self) => {
 
@@ -1105,17 +999,9 @@
       masterTimeline.to(
         ring,
         {
-
-          frame: frameCount - 1,
-
-          snap: "frame",
-
+          targetFrame: frameCount - 1,
           ease: "none",
-
-          duration: 100,
-
-          onUpdate: render
-
+          duration: 100
         },
         0
       );
@@ -1145,7 +1031,7 @@
 
       // =========================================
       // SECTION 2
-      // Craftsmanship Fade In
+      // Benefits Fade In
       // =========================================
 
       masterTimeline.fromTo(
@@ -1161,7 +1047,7 @@
           opacity: 1,
           y: 0,
           pointerEvents: "auto",
-          duration: 12
+          duration: 16
         },
 
         26
@@ -1223,7 +1109,7 @@
       );
 
 
-      // Craftsmanship Fade Out
+      // Benefits Fade Out
       masterTimeline.to(
         "#health-overlay",
         {
@@ -1243,7 +1129,7 @@
 
       // =========================================
       // SECTION 3
-      // Details Fade In
+      // Features Fade In
       // =========================================
 
       masterTimeline.fromTo(
@@ -1303,7 +1189,7 @@
       );
 
 
-      // Details Fade Out
+      // Features Fade Out
       masterTimeline.to(
         "#battery-overlay",
         {
@@ -1339,7 +1225,7 @@
           opacity: 1,
           y: 0,
           pointerEvents: "auto",
-          duration: 12
+          duration: 16
         },
 
         82
@@ -1456,98 +1342,6 @@
 
 
     // =========================================
-    // RING FINISH SELECTION
-    // =========================================
-
-    function selectColor(btn, colorName) {
-
-      document
-        .querySelectorAll(".color-btn")
-        .forEach(b => {
-
-          b.classList.remove(
-            "border-neonBlue",
-            "text-white",
-            "bg-neonBlue/10"
-          );
-
-          b.classList.add(
-            "border-white/5",
-            "text-zinc-400",
-            "bg-transparent"
-          );
-
-        });
-
-
-      btn.classList.remove(
-        "border-white/5",
-        "text-zinc-400",
-        "bg-transparent"
-      );
-
-
-      btn.classList.add(
-        "border-neonBlue",
-        "text-white",
-        "bg-neonBlue/10"
-      );
-
-
-      document.getElementById(
-        "selected-color"
-      ).value = colorName;
-
-    }
-
-
-    // =========================================
-    // RING SIZE SELECTION
-    // =========================================
-
-    function selectSize(btn, sizeNum) {
-
-      document
-        .querySelectorAll(".size-btn")
-        .forEach(b => {
-
-          b.classList.remove(
-            "border-neonBlue",
-            "text-white",
-            "bg-neonBlue/10"
-          );
-
-          b.classList.add(
-            "border-white/5",
-            "text-zinc-400",
-            "bg-transparent"
-          );
-
-        });
-
-
-      btn.classList.remove(
-        "border-white/5",
-        "text-zinc-400",
-        "bg-transparent"
-      );
-
-
-      btn.classList.add(
-        "border-neonBlue",
-        "text-white",
-        "bg-neonBlue/10"
-      );
-
-
-      document.getElementById(
-        "selected-size"
-      ).value = sizeNum;
-
-    }
-
-
-    // =========================================
     // SIZING INFORMATION MODAL
     // =========================================
 
@@ -1585,175 +1379,83 @@
     const reservationCard =
       document.getElementById("reservation-card");
 
+    preorderForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-    preorderForm.addEventListener(
-      "submit",
-      (e) => {
+      const submitBtn =
+        preorderForm.querySelector("button[type='submit']");
 
-        e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
 
+      const name = document.getElementById("cust-name").value;
+      const email = document.getElementById("cust-email").value;
+      const phone = document.getElementById("cust-phone").value;
+      const message = document.getElementById("cust-message").value;
 
-        const submitBtn =
-          preorderForm.querySelector(
-            "button[type='submit']"
-          );
+      // Front-end lead capture demo. Connect this handler to Formspree,
+      // EmailJS, your API, or another CRM endpoint when credentials are available.
+      setTimeout(() => {
+        const requestNo =
+          Math.floor(100000 + Math.random() * 900000);
 
+        gsap.to(reservationCard, {
+          scale: 0.96,
+          opacity: 0,
+          duration: 0.45,
+          onComplete: () => {
+            reservationCard.innerHTML = `
+              <div class="text-center py-8">
+                <div
+                  class="w-16 h-16 bg-neonBlue/10 border border-neonBlue rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(0,243,255,0.3)]">
+                  <svg
+                    class="w-8 h-8 text-neonBlue"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7">
+                    </path>
+                  </svg>
+                </div>
 
-        submitBtn.disabled = true;
+                <span
+                  class="text-neonBlue text-xs uppercase tracking-[0.2em] font-semibold mb-2 block">
+                  Request Received
+                </span>
 
-        submitBtn.textContent =
-          "Processing...";
+                <h3 class="text-2xl font-light tracking-tight text-white mb-4">
+                  Thank you, ${name.split(" ")[0]}.
+                </h3>
 
+                <p class="text-zinc-400 font-light text-sm leading-relaxed mb-6 font-sans">
+                  We’ve received your request and will contact you at
+                  <strong class="text-white">${email}</strong>
+                  ${phone ? `or ${phone}` : ""}
+                  with more information about AURA.
+                </p>
 
-        const name =
-          document.getElementById(
-            "cust-name"
-          ).value;
+                <div
+                  class="p-3 bg-zinc-900/60 border border-white/5 rounded-lg inline-block text-xs text-zinc-500 tracking-wider uppercase font-mono">
+                  Request Ref: AURA-${requestNo}
+                </div>
+              </div>
+            `;
 
+            gsap.to(reservationCard, {
+              scale: 1,
+              opacity: 1,
+              duration: 0.5
+            });
 
-        const email =
-          document.getElementById(
-            "cust-email"
-          ).value;
-
-
-        const color =
-          document.getElementById(
-            "selected-color"
-          ).value;
-
-
-        const size =
-          document.getElementById(
-            "selected-size"
-          ).value;
-
-
-        // Simulate reservation processing
-        setTimeout(() => {
-
-          gsap.to(
-            reservationCard,
-            {
-
-              scale: 0.9,
-
-              opacity: 0,
-
-              duration: 0.5,
-
-              onComplete: () => {
-
-                const reservationNo =
-                  Math.floor(
-                    100000 +
-                    Math.random() * 900000
-                  );
-
-
-                reservationCard.innerHTML = `
-
-                  <div class="text-center py-8">
-
-                    <div
-                      class="w-16 h-16 bg-neonBlue/10 border border-neonBlue rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(0,243,255,0.3)]">
-
-                      <svg
-                        class="w-8 h-8 text-neonBlue"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24">
-
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M5 13l4 4L19 7">
-                        </path>
-
-                      </svg>
-
-                    </div>
-
-
-                    <span
-                      class="text-neonBlue text-xs uppercase tracking-[0.2em] font-semibold mb-2 block">
-
-                      Reservation Received
-
-                    </span>
-
-
-                    <h3
-                      class="text-2xl font-light tracking-tight text-white mb-4">
-
-                      A beautiful choice,
-                      ${name.split(' ')[0]}
-
-                    </h3>
-
-
-                    <p
-                      class="text-zinc-400 font-light text-sm leading-relaxed mb-6 font-sans">
-
-                      Your reservation for the
-                      <strong class="text-white">
-                        ${color}
-                      </strong>
-                      ring in Size
-                      <strong class="text-white">
-                        ${size}
-                      </strong>
-                      has been received.
-
-                      Our jewelry team will contact you at
-                      <strong class="text-white">
-                        ${email}
-                      </strong>
-                      to confirm the details of your ring.
-
-                    </p>
-
-
-                    <div
-                      class="p-3 bg-zinc-900/60 border border-white/5 rounded-lg inline-block text-xs text-zinc-500 tracking-wider uppercase font-mono">
-
-                      Reservation Ref:
-                      RING-${reservationNo}
-
-                    </div>
-
-                  </div>
-
-                `;
-
-
-                gsap.to(
-                  reservationCard,
-                  {
-
-                    scale: 1,
-
-                    opacity: 1,
-
-                    duration: 0.5
-
-                  }
-                );
-
-
-                initCursorHovers();
-
-              }
-
-            }
-          );
-
-        }, 1500);
-
-      }
-    );
-
+            initCursorHovers();
+          }
+        });
+      }, 900);
+    });
 
     // =========================================
     // INITIALIZE
@@ -1764,6 +1466,12 @@
       initScrollytelling();
 
       initCursorHovers();
+
+      // Start one lightweight rendering loop for smooth frame interpolation.
+      if (!animationRunning) {
+        animationRunning = true;
+        requestAnimationFrame(smoothFrameLoop);
+      }
 
     });
 
